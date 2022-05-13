@@ -211,41 +211,13 @@ const Index = ({ song, songs, dispatch }) => {
 
 	return (
 		<View style={styles.container}>
-			<View style={styles.tracker}>
-				<View
-					style={{
-						...StyleSheet.absoluteFill,
-						zIndex: 99,
-					}}
-				/>
-				<Slider
-					minimumValue={0}
-					maximumValue={song?.detail?.durationMillis}
-					minimumTrackTintColor="#C07037"
-					thumbTintColor="transparent"
-					maximumTrackTintColor="transparent"
-					value={song?.playbackStatus?.positionMillis || 0}
-				/>
-			</View>
+			
 			<View style={styles.left}>
 				<TouchableWithoutFeedback onPress={() => navigate(SCREENS.PLAYING)}>
-					<View style={styles.coverArtContainer}>
-						<Image
-							style={{
-								width: 130,
-								height: 130,
-								position: 'absolute',
-								right: -6,
-								opacity: 0.5,
-								alignSelf: 'center',
-							}}
-							source={{ uri: song?.detail?.img }}
-							resizeMode="cover"
-							borderRadius={150}
-							blurRadius={100}
-						/>
-						<Image style={styles.coverArt} source={{ uri: song?.detail?.img }} resizeMode="cover" borderRadius={150} />
-					</View>
+					
+						
+						<Image style={styles.coverArt} source={{ uri: song?.detail?.img }} resizeMode="cover"  />
+					
 				</TouchableWithoutFeedback>
 			</View>
 			<View style={styles.content}>
@@ -309,8 +281,9 @@ const styles = StyleSheet.create({
 		bottom: -20,
 	},
 	coverArt: {
-		width: 135,
-		height: 135,
+		width: 100,
+		height: 100,
+		borderRadius: 50
 	},
 	content: {
 		flex: 1,

@@ -22,7 +22,7 @@ const Index = ({ songs }) => {
 						},
 						middle: {
 							show: true,
-							text: 'All Songs',
+							text: 'All SONGS',
 						},
 						right: {
 							show: false,
@@ -43,6 +43,7 @@ export default connect(mapStateToProps, null)(Index);
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
+		backgroundColor: '#FAF1DF'
 	},
 	sections: {
 		flex: 1,

@@ -47,7 +47,7 @@ const Index = ({ songs }) => {
 							<Section.MusicList audios={audios} />
 						) : (
 							<View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-								<Text style={{ fontSize: 24, fontWeight: 'bold', color: 'rgba(0, 0, 0, .3)' }}>Search something...</Text>
+								<Text style={{ fontSize: 24, fontWeight: 'bold', color: 'rgba(0, 0, 0, .3)' }}>Search...</Text>
 							</View>
 						)}
 					</View>
@@ -63,6 +63,7 @@ export default connect(mapStateToProps, null)(memo(Index));
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
+		backgroundColor: '#FAF1DF',
 		justifyContent: 'space-between',
 	},
 	header: {

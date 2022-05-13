@@ -23,7 +23,7 @@ const Index = ({ songs, playlists, navigation }) => {
 						},
 						middle: {
 							show: true,
-							text: 'Playlists',
+							text: 'PLAYLISTS',
 						},
 						right: {
 							show: false,
@@ -49,7 +49,7 @@ const Index = ({ songs, playlists, navigation }) => {
 					</ScrollView>
 				) : (
 					<View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-						<Text style={{ fontSize: 24, fontWeight: 'bold', color: 'rgba(0, 0, 0, .3)' }}>No playlists yet!</Text>
+						<Text style={{ fontSize: 24, fontWeight: 'bold', color: 'rgba(0, 0, 0, .3)' }}>No playlists...</Text>
 					</View>
 				)}
 			</SafeAreaView>
@@ -63,6 +63,8 @@ export default connect(mapStateToProps, null)(Index);
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
+		backgroundColor: '#FAF1DF'
+
 	},
 	sections: {
 		flexDirection: 'row',
