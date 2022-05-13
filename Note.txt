@@ -1,0 +1,28 @@
+Dependencies
+npm i @expo/vector-icons
+npm i @react-native-async-storage/async-storage
+npm i @react-native-community/slider
+npm i @react-navigation/native
+npm i expo-ads-admob
+--->>
+Configure for iOS
+Run npx pod-install after installing the npm package.
+----
+npm i expo-asset
+npm i expo-av
+npm i expo-constants
+npm i expo-linear-gradient
+npm i expo-linking
+npm i expo-status-bar
+npm i react-native-animatable 0
+npm i react-redux
+npm i redux
+npm i @react-navigation/stack
+npm i react-native-safe-area-context
+npm i react-native-gesture-handler
+npm i react-native-reanimated
+npm i react-native-screens
+--------------
+
+@react-native-community/masked-view: k cần
+
