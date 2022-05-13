@@ -4,7 +4,7 @@ import { useAssets } from 'expo-asset';
 import { LinearGradient } from 'expo-linear-gradient';
 
 const Explore = ({ style = {}, imageURL, title = 'Explore', subtitle = `Listen to what's trending now`, onPress = () => {} }) => {
-	const [assets] = useAssets([require('../../assets/explore/default.png'), require('../../assets/icons/play.png')]);
+	// const [assets] = useAssets([require('../../assets/explore/default.png'), require('../../assets/icons/play.png')]);
 
 	return (
 		<View style={[styles.container, style]}>

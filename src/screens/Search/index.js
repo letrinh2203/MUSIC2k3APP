@@ -47,7 +47,7 @@ const Index = ({ songs }) => {
 							<Section.MusicList audios={audios} />
 						) : (
 							<View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-								<Text style={{ fontSize: 24, fontWeight: 'bold', color: 'rgba(0, 0, 0, .3)' }}>Search...</Text>
+								<Text style={{ fontSize: 24, fontWeight: 'bold', color: 'rgba(0, 0, 0, .5)' }}>Search...</Text>
 							</View>
 						)}
 					</View>
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
 		flexDirection: 'row',
 		paddingVertical: 8,
 		paddingHorizontal: 15,
-		backgroundColor: '#E6E6E6',
+		backgroundColor: '#FFCA97',
 		borderRadius: 6,
 	},
 	textInput: {
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 	},
 	btnTxt: {
-		color: '#C4C4C4',
+		color: '#413923',
 		fontSize: 18,
 		fontWeight: 'bold',
 		letterSpacing: 1,
