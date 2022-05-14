@@ -111,7 +111,7 @@ const Playlist = ({ storedPlaylists, dispatch, visible = false, onClose = () => 
 				onPress={closeModal}
 			/>
 			<Animatable.View style={styles.modal} animation={animation} duration={300}>
-				<Text style={{ color: 'rgba(0, 0, 0, .5)', fontSize: 24, fontWeight: 'bold', letterSpacing: 1, marginBottom: 20 }}>Playlists</Text>
+				<Text style={{ color: 'rgba(0, 0, 0, .8)', fontSize: 24, fontWeight: 'bold', letterSpacing: 1, marginBottom: 20 }}>Playlists</Text>
 				{playlists.map(({ name, songs }, key) => (
 					<TouchableOpacity key={key} style={styles.item} onPress={() => addToPlaylist(name)} activeOpacity={0.6}>
 						<Text style={{ color: 'rgba(0, 0, 0, .5)', fontSize: 16, letterSpacing: 1 }}>{`${name} (${songs.length || 0})`}</Text>
@@ -119,17 +119,17 @@ const Playlist = ({ storedPlaylists, dispatch, visible = false, onClose = () => 
 				))}
 
 				{!newPlaylist && (
-					<TouchableOpacity style={styles.item} onPress={() => setNewPlaylist(true)} activeOpacity={0.6}>
-						<Text style={{ color: 'rgba(0, 0, 0, .5)', fontSize: 16, letterSpacing: 1 }}>Create playlist</Text>
+					<TouchableOpacity style={styles.itemnew} onPress={() => setNewPlaylist(true)} activeOpacity={0.6}>
+						<Text style={{ color: 'rgba(0, 0, 0, .7)', fontSize: 17, letterSpacing: 1 }}>Create playlist</Text>
 					</TouchableOpacity>
 				)}
 
 				{newPlaylist && (
 					<View style={{ flexDirection: 'row', marginBottom: 10 }}>
 						<View style={styles.input}>
-							<TextInput style={styles.textInput} onChangeText={handleInput} value={input} placeholder="Playlist Name : " maxLength={25} />
+							<TextInput style={styles.textInput} onChangeText={handleInput} value={input} placeholder="Playlist Name :... " maxLength={25} />
 						</View>
-						<TouchableOpacity style={styles.btn} onPress={input.length >= 3 ? createPlaylist : () => {}}>
+						<TouchableOpacity style={styles.btn} onPress={input.length >= 1 ? createPlaylist : () => {}}>
 							<Text style={[styles.btnTxt, { color: '#C07037' }, input.length < 3 && { opacity: 0.5 }]}>Create</Text>
 						</TouchableOpacity>
 						<TouchableOpacity
@@ -160,7 +160,7 @@ const styles = StyleSheet.create({
 		right: 0,
 		paddingVertical: 20,
 		paddingHorizontal: 30,
-		backgroundColor: '#FFF',
+		backgroundColor: '#FAF1DF',
 		borderTopLeftRadius: 15,
 		borderTopRightRadius: 15,
 		zIndex: 9999,
@@ -168,9 +168,19 @@ const styles = StyleSheet.create({
 	item: {
 		paddingVertical: 10,
 		paddingHorizontal: 15,
-		backgroundColor: '#E6E6E6',
+		backgroundColor: '#FFf',
 		marginBottom: 10,
 		borderRadius: 5,
+		borderColor: '#413923',
+		borderWidth: 0.8,
+	},
+	itemnew: {
+		paddingVertical: 10,
+		paddingHorizontal: 15,
+		backgroundColor: '#FFCA97',
+		marginBottom: 10,
+		borderRadius: 5,
+		alignItems: 'center'
 	},
 	input: {
 		flex: 1,
@@ -183,6 +193,7 @@ const styles = StyleSheet.create({
 	textInput: {
 		flex: 1,
 		color: 'rgba(0, 0, 0, .5)',
+		fontSize: 15,
 		marginLeft: 10,
 	},
 	btn: {
@@ -191,7 +202,7 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 	},
 	btnTxt: {
-		color: '#C4C4C4',
+		color: 'rgba(0, 0, 0, .5)',
 		fontSize: 18,
 		fontWeight: 'bold',
 		letterSpacing: 1,

@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { StatusBar } from 'expo-status-bar';
 import { LinearGradient } from 'expo-linear-gradient';
 import Constants from 'expo-constants';
+import { Footer} from '../../widgets'
 
 import { Icon } from '../../components';
 import { Header, Section } from '../../widgets';
@@ -30,13 +31,13 @@ const Index = ({ songs, playlists, dispatch, route: { params }, navigation: { go
 	};
 
 	const handleDelete = () => {
-		Alert.alert('Trash', `Are you sure you want to delete "${playlist?.name}" playlist?`, [
+		Alert.alert('Trash', `Are you want to delete "${playlist?.name}" playlist?`, [
 			{
-				text: 'No! Thanks',
+				text: 'No',
 				style: 'cancel',
 			},
 			{
-				text: 'Yes! Please',
+				text: 'Agree',
 				onPress: async () => {
 					await deletePlaylist();
 					goBack();
@@ -86,6 +87,8 @@ const Index = ({ songs, playlists, dispatch, route: { params }, navigation: { go
 					</View>
 				)}
 			</ScrollView>
+			<Footer />
+
 		</>
 	) : (
 		<></>
@@ -114,8 +117,8 @@ const styles = StyleSheet.create({
 		height: Dimensions.get('screen').height / 3.2,
 	},
 	title: {
-		color: '#FFF',
-		fontSize: 24,
+		color: '#fff',
+		fontSize: 30,
 		fontWeight: '900',
 		letterSpacing: 1,
 		alignSelf: 'center',

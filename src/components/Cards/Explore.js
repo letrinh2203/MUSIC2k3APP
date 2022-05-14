@@ -15,7 +15,7 @@ const Explore = ({ style = {}, imageURL, title = 'Explore', subtitle = `Listen t
 					<Text style={styles.subtitle}>{subtitle}</Text>
 				</View>
 				<TouchableOpacity style={styles.btn} onPress={onPress}>
-					<Image style={{ width: 40, height: 40 }} source={require('../../assets/icons/play.png')} resizeMode="contain" />
+					<Image style={{ width: 35, height: 35 }} source={require('../../assets/icons/play.png')} resizeMode="contain" />
 				</TouchableOpacity>
 			</ImageBackground>
 		</View>

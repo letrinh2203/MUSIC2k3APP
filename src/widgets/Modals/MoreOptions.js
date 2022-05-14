@@ -41,17 +41,17 @@ const MoreOptions = ({
 	}, [visible]);
 
 	return (
-		<Modal visible={visible} transparent animationType="fade">
+		<Modal visible={visible} transparent animationType="fade" >
 			<TouchableOpacity
 				style={[{ position: 'absolute', top: 0, right: 0, bottom: 0, left: 0, width, height, backgroundColor: 'rgba(0, 0, 0, .5)', zIndex: 999 }]}
 				activeOpacity={1}
 				onPress={closeModal}
 			/>
 			<Animatable.View style={styles.modal} animation={animation} duration={300}>
-				<Text style={{ color: 'rgba(0, 0, 0, .5)', fontSize: 24, fontWeight: 'bold', letterSpacing: 1, marginBottom: 20 }}>{title}</Text>
+				<Text style={{ color: 'rgba(0, 0, 0, .8)', fontSize: 24, fontWeight: 'bold', letterSpacing: 1, marginBottom: 20 }}>{title}</Text>
 				{moreOptions.map(({ text, onPress }, key) => (
-					<TouchableOpacity key={key} style={{ paddingVertical: 10, paddingHorizontal: 15, backgroundColor: '#E6E6E6', marginBottom: 10, borderRadius: 5 }} onPress={onPress} activeOpacity={0.6}>
-						<Text style={{ color: 'rgba(0, 0, 0, .5)', fontSize: 16, letterSpacing: 1 }}>{text}</Text>
+					<TouchableOpacity key={key} style={{ paddingVertical: 10, paddingHorizontal: 15, backgroundColor: '#FAF1DF', marginBottom: 10, borderRadius: 5 }} onPress={onPress} activeOpacity={0.6}>
+						<Text style={{ color: 'rgba(0, 0, 0, .6)', fontSize: 16, letterSpacing: 1 }}>{text}</Text>
 					</TouchableOpacity>
 				))}
 			</Animatable.View>
@@ -73,5 +73,8 @@ const styles = StyleSheet.create({
 		borderTopLeftRadius: 15,
 		borderTopRightRadius: 15,
 		zIndex: 9999,
+		backgroundColor: '#FFCA97',
+
 	},
+
 });
