@@ -4,7 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useAssets } from 'expo-asset';
 import { connect } from 'react-redux';
 
-import { Header, Drawer } from '../../widgets';
+import { Header, Drawer,Footer } from '../../widgets';
 import { Card, Icon } from '../../components';
 import { SCREENS } from '../../constants';
 
@@ -52,6 +52,7 @@ const Index = ({ songs, playlists, navigation }) => {
 						<Text style={{ fontSize: 24, fontWeight: 'bold', color: 'rgba(0, 0, 0, .3)' }}>No playlists...</Text>
 					</View>
 				)}
+				        <Footer />
 			</SafeAreaView>
 		</Drawer>
 	);

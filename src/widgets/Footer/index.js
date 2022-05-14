@@ -283,7 +283,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     width,
-    height: 80,
+    height: 60,
     borderBottomLeftRadius: 15,
     borderBottomRightRadius: 15,
   },

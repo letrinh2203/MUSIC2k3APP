@@ -4,7 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import { useAssets } from 'expo-asset'
 import { connect } from 'react-redux'
 
-import { Header, Section, Drawer } from '../../widgets'
+import { Footer,Header, Section, Drawer } from '../../widgets'
 import { Icon } from '../../components'
 
 const Index = ({ songs }) => {
@@ -39,7 +39,7 @@ const Index = ({ songs }) => {
               text: 'MY FAVOURITES',
             },
             right: {
-              show: false,
+              show: true,
             },
           }}
         />
@@ -70,6 +70,7 @@ const Index = ({ songs }) => {
             </View>
           )}
         </View>
+        <Footer />
       </SafeAreaView>
     </Drawer>
   )

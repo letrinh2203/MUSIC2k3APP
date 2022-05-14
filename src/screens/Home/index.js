@@ -39,8 +39,8 @@ const Index = () => {
 		<ScrollView>
         <View style={styles.sections}>
 		<Section.Explore />
-		<Section.Recent style={{ marginTop: 30 }} />
-		<Section.Playlist style={{ marginTop: 30 }} />
+		<Section.Recent style={{ marginTop: 50 }} />
+		<Section.Playlist style={{ marginTop: 50 }} />
 		</View>
 		</ScrollView>
         <Footer />
