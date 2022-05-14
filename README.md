@@ -1,18 +1,33 @@
 ﻿# MUSIC2k3APP
+ 
 3.1 Cài đặt công cụ
+
 -	Cài đặt Node 14 LTS (hoặc version lớn hơn).
+
 -	Cài đặt máy ảo android trên android studio, máy ảo trên Xcode hoặc dùng điện thoại thật để chạy chương trình.
+
 -	Cài đặt công cụ để viết code: Visual Studio
+
 3.2 Thiết lập môi trường để xây dựng chương trình với Expo
+
 -	Cài đặt Expo CLI:
+
 npm install -g expo-cli
+
 -	Tạo một project: 
+
 expo init AwesomeProject
+
 (AwesomeProject có thể thay đổi tùy theo tên project muốn tạo)
+
 -	Bắt đầu project:
+
 cd AwesomeProject
+
 npm start
+
 3.3 Thiết lập các thư viện 
+
 npm i @expo/vector-icons
 
 npm i @react-native-async-storage/async-storage
@@ -52,6 +67,7 @@ npm i react-native-reanimated
 npm i react-native-screens
 
 npm link
+
 Demo:
 
 ![image](https://user-images.githubusercontent.com/88887819/168412815-33fcad10-c911-428c-84e5-a9ea0a0f47d3.png)
